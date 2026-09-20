@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPCO — Touba Pro Construction | Cité Malika</title>
+<style>
+  :root {
+    --gold: #b8935f;
+    --gold-dark: #96774a;
+    --navy: #1a2b3c;
+    --navy-light: #24384d;
+    --cream: #faf7f2;
+    --text: #2c2c2c;
+    --muted: #6b6b6b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  .sans { font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+  .tpco-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #2d4258 100%);
+    color: #fff;
+    padding: 56px 8% 64px;
+    text-align: center;
+    position: relative;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    padding: 8px 16px;
+    border-radius: 30px;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .back-link:hover { background: var(--gold); color: var(--navy); }
+  .tpco-header h1 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .tpco-header h1 strong { color: var(--gold); font-weight: 700; }
+  .tpco-header p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #dfe3e8;
+  }
+
+  main { padding: 64px 8% 20px; max-width: 1100px; margin: 0 auto; }
+
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto 46px;
+  }
+
+  .tpco-section { background: var(--cream); }
+  .tpco-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 8px 0 40px;
+  }
+  .tpco-stat { text-align: center; }
+  .tpco-stat .num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold-dark);
+    line-height: 1;
+  }
+  .tpco-stat .lbl {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .catalogue-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26,43,60,0.08);
+    cursor: pointer;
+    border: 1px solid #e6ded2;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .catalogue-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(26,43,60,0.16);
+  }
+  .catalogue-cover {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-bottom: 3px solid var(--gold);
+  }
+  .catalogue-info { padding: 18px 22px; }
+  .catalogue-info h3 { font-size: 18px; color: var(--navy); margin-bottom: 4px; }
+  .catalogue-info p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .catalogue-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+  }
+
+  .villa-brochure-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    padding: 10px;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--gold-dark);
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .villa-brochure-btn:hover { background: var(--gold); color: #fff; }
+
+  .upcoming-title {
+    font-size: 22px;
+    color: var(--navy);
+    text-align: center;
+    margin: 10px 0 6px;
+  }
+  .upcoming-sub {
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .upcoming-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .upcoming-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 26px;
+    box-shadow: 0 4px 20px rgba(26,43,60,0.06);
+    border-top: 3px solid var(--gold);
+  }
+  .upcoming-card h4 { font-size: 17px; color: var(--navy); margin-bottom: 2px; }
+  .upcoming-card .upcoming-loc {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .upcoming-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13.5px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0ebe3;
+    gap: 12px;
+  }
+  .upcoming-row:last-of-type { border-bottom: none; }
+  .upcoming-row .u-left { display: flex; flex-direction: column; }
+  .upcoming-row .u-name { color: var(--navy); font-weight: 600; }
+  .upcoming-row .u-surface { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .upcoming-row .u-price { color: var(--gold-dark); font-weight: 700; white-space: nowrap; }
+  .upcoming-note {
+    margin-top: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* BOOK VIEWER */
+  .bookviewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,15,25,0.95);
+    z-index: 1100;
+    flex-direction: column;
+  }
+  .bookviewer.active { display: flex; }
+  .book-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 22px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .book-title { font-size: 14px; letter-spacing: 0.3px; }
+  .book-pagecount { font-size: 12.5px; color: #b9c2cd; }
+  .book-close { font-size: 30px; cursor: pointer; opacity: 0.85; line-height: 1; }
+  .book-close:hover { opacity: 1; }
+  .book-stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 16px 10px;
+    min-height: 0;
+    position: relative;
+  }
+  .book-img {
+    max-width: 82vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .book-nav {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+  }
+  .book-nav:hover { background: rgba(255,255,255,0.22); }
+  .book-nav:disabled { opacity: 0.25; cursor: default; }
+  .book-hint {
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11.5px;
+    color: #8f98a3;
+    padding-bottom: 18px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 700px) {
+    .catalogue-grid, .upcoming-grid { grid-template-columns: 1fr; }
+    .book-stage { flex-wrap: wrap; row-gap: 14px; }
+    .book-img { order: 1; flex: 1 1 100%; max-width: 92vw; max-height: 64vh; }
+    #book-prev { order: 2; }
+    #book-next { order: 3; }
+    .book-nav { width: 48px; height: 48px; font-size: 22px; }
+  }
+
+
+  .back-footer { text-align: center; padding: 10px 0 70px; }
+  .back-footer a {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13.5px;
+    color: var(--gold-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+  }
+  @media (max-width: 700px) {
+    .back-link { position: static; display: inline-flex; margin-bottom: 18px; }
+    .tpco-header { padding: 40px 6% 44px; }
+    .tpco-header h1 { font-size: 27px; }
+    .tpco-header p { font-size: 13.5px; }
+    main { padding: 44px 6% 10px; }
+    .tpco-stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="tpco-header">
+    <a href="index.html" class="back-link sans">← Retour à Cité Malika</a>
+    <h1>Le constructeur <strong>TPCO</strong></h1>
+    <p>Touba Pro Construction en quelques chiffres — programmes en cours de livraison et à venir.</p>
+  </div>
+
+  <main>
+  <section class="tpco-section">
+    <div class="tpco-stats sans">
+      <div class="tpco-stat">
+        <div class="num">7</div>
+        <div class="lbl">Programmes en cours à Dakar</div>
+      </div>
+      <div class="tpco-stat">
+        <div class="num">3</div>
+        <div class="lbl">Programmes à venir</div>
+      </div>
+      <div class="tpco-stat">
+        <div class="num">461</div>
+        <div class="lbl">Logements &amp; villas prévus</div>
+      </div>
+    </div>
+
+    <div class="catalogue-grid">
+      <div class="catalogue-card" onclick="openBook('tpco-presentation')">
+        <img class="catalogue-cover" src="assets/catalogue/tpco-presentation/page-1.jpg" alt="Plaquette de présentation TPCO" loading="lazy">
+        <div class="catalogue-info">
+          <h3>Plaquette de présentation TPCO</h3>
+          <p>Le constructeur, ses valeurs et l'ensemble de son savoir-faire en un seul document.</p>
+          <span class="catalogue-cta sans">📖 Consulter — 10 pages</span>
+        </div>
+      </div>
+      <div class="catalogue-card" onclick="openBook('projets-en-cours')">
+        <img class="catalogue-cover" src="assets/catalogue/projets-en-cours/page-1.jpg" alt="Présentation des projets en cours TPCO" loading="lazy">
+        <div class="catalogue-info">
+          <h3>Projets en cours</h3>
+          <p>7 résidences à Dakar — Point E, Yoff Biagui, Ouakam-Mamelles, Dieuppeul, Yoff Virage.</p>
+          <span class="catalogue-cta sans">📖 Consulter — 10 pages</span>
+        </div>
+      </div>
+      <div class="catalogue-card" onclick="openBook('projets-a-venir')">
+        <img class="catalogue-cover" src="assets/catalogue/projets-a-venir/page-1.jpg" alt="Présentation des projets à venir TPCO" loading="lazy">
+        <div class="catalogue-info">
+          <h3>Projets à venir</h3>
+          <p>Cité Malika, Cité Diawartou Nguékhokh et Résidence Darou — les 3 prochains programmes.</p>
+          <span class="catalogue-cta sans">📖 Consulter — 7 pages</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="upcoming-title">Prochainement</h3>
+    <p class="upcoming-sub">Deux nouveaux programmes TPCO en préparation, avec une première grille de prix indicative.</p>
+
+    <div class="upcoming-grid">
+      <div class="upcoming-card">
+        <h4>Cité Diawartou</h4>
+        <div class="upcoming-loc sans">Nguékhokh</div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">Villa Al Mouna</span>
+            <span class="u-surface">200 à 235 m² — plain-pied RDC</span>
+          </div>
+          <span class="u-price">Dès 58 M FCFA</span>
+        </div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">Villa Al Badi</span>
+            <span class="u-surface">300 m² — R+1, piscine en option</span>
+          </div>
+          <span class="u-price">Dès 88 M FCFA</span>
+        </div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">Villa Miftah</span>
+            <span class="u-surface">400 m² — R+1 avec terrasse, option piscine</span>
+          </div>
+          <span class="u-price">Dès 168 M FCFA</span>
+        </div>
+        <div class="upcoming-note">Prix indicatifs, à confirmer selon le plan architecte définitif.</div>
+      </div>
+      <div class="upcoming-card">
+        <h4>Résidence Darou</h4>
+        <div class="upcoming-loc sans">VDN, Dakar</div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">F2</span>
+            <span class="u-surface">≈ 70 m²</span>
+          </div>
+          <span class="u-price">50 à 55 M FCFA</span>
+        </div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">F3</span>
+            <span class="u-surface">≈ 100 m²</span>
+          </div>
+          <span class="u-price">75 à 80 M FCFA</span>
+        </div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">F4</span>
+            <span class="u-surface">≈ 150 m²</span>
+          </div>
+          <span class="u-price">115 à 120 M FCFA</span>
+        </div>
+        <div class="upcoming-row">
+          <div class="u-left">
+            <span class="u-name">F5</span>
+            <span class="u-surface">200 à 250 m²</span>
+          </div>
+          <span class="u-price">≈ 150 M FCFA</span>
+        </div>
+        <div class="upcoming-note">Prix indicatifs, à confirmer selon le plan architecte définitif.</div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <div class="back-footer">
+    <a href="index.html" class="sans">← Retour à la présentation des villas Cité Malika</a>
+  </div>
+
+  <script>
+    // BOOK VIEWER — catalogue mode
+    var BOOK_CATALOGUES = {
+      'villa-type1': { title: 'Villa Type 1 — Fiche détaillée', base: 'assets/catalogue/villa-type1/', count: 15 },
+      'villa-type2': { title: 'Villa Type 2 — Fiche détaillée', base: 'assets/catalogue/villa-type2/', count: 15 },
+      'villa-type3': { title: 'Villa Type 3 — Fiche détaillée', base: 'assets/catalogue/villa-type3/', count: 15 },
+      'cite-malika-presentation': { title: 'Cité Malika — Présentation', base: 'assets/catalogue/cite-malika-presentation/', count: 11 },
+      'tpco-presentation': { title: 'TPCO — Plaquette de présentation', base: 'assets/catalogue/tpco-presentation/', count: 10 },
+      'projets-a-venir': { title: 'TPCO — Projets à venir', base: 'assets/catalogue/projets-a-venir/', count: 7 },
+      'projets-en-cours': { title: 'TPCO — Projets en cours', base: 'assets/catalogue/projets-en-cours/', count: 10 }
+    };
+    var bookState = { key: null, page: 1 };
+
+    function openBook(key) {
+      var cat = BOOK_CATALOGUES[key];
+      if (!cat) return;
+      bookState.key = key;
+      bookState.page = 1;
+      document.getElementById('book-title').textContent = cat.title;
+      updateBookPage();
+      document.getElementById('bookviewer').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBook() {
+      document.getElementById('bookviewer').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function updateBookPage() {
+      var cat = BOOK_CATALOGUES[bookState.key];
+      if (!cat) return;
+      var img = document.getElementById('book-img');
+      img.src = cat.base + 'page-' + bookState.page + '.jpg';
+      img.alt = cat.title + ' — page ' + bookState.page;
+      document.getElementById('book-pagecount').textContent = bookState.page + ' / ' + cat.count;
+      document.getElementById('book-prev').disabled = bookState.page <= 1;
+      document.getElementById('book-next').disabled = bookState.page >= cat.count;
+      preloadBookNeighbors();
+    }
+    function preloadBookNeighbors() {
+      var cat = BOOK_CATALOGUES[bookState.key];
+      if (!cat) return;
+      [bookState.page - 1, bookState.page + 1].forEach(function(p) {
+        if (p >= 1 && p <= cat.count) {
+          var im = new Image();
+          im.src = cat.base + 'page-' + p + '.jpg';
+        }
+      });
+    }
+    function bookNext() {
+      var cat = BOOK_CATALOGUES[bookState.key];
+      if (cat && bookState.page < cat.count) { bookState.page++; updateBookPage(); }
+    }
+    function bookPrev() {
+      if (bookState.page > 1) { bookState.page--; updateBookPage(); }
+    }
+    document.addEventListener('keydown', function(e) {
+      var lb = document.getElementById('bookviewer');
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') bookNext();
+      else if (e.key === 'ArrowLeft') bookPrev();
+      else if (e.key === 'Escape') closeBook();
+    });
+    (function() {
+      var startX = null;
+      document.addEventListener('touchstart', function(e) {
+        var lb = document.getElementById('bookviewer');
+        if (!lb || !lb.classList.contains('active')) return;
+        startX = e.touches[0].clientX;
+      });
+      document.addEventListener('touchend', function(e) {
+        var lb = document.getElementById('bookviewer');
+        if (!lb || !lb.classList.contains('active') || startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (dx > 50) bookPrev();
+        else if (dx < -50) bookNext();
+        startX = null;
+      });
+    })();
+
+  </script>
+
+  <div id="bookviewer" class="bookviewer" onclick="if(event.target===this) closeBook()">
+    <div class="book-topbar">
+      <span id="book-title" class="book-title sans"></span>
+      <span id="book-pagecount" class="book-pagecount sans"></span>
+      <span class="book-close" onclick="closeBook()">&times;</span>
+    </div>
+    <div class="book-stage">
+      <button id="book-prev" class="book-nav" onclick="bookPrev()" type="button" aria-label="Page précédente">&#8249;</button>
+      <img id="book-img" class="book-img" src="" alt="" oncontextmenu="return false;" draggable="false">
+      <button id="book-next" class="book-nav" onclick="bookNext()" type="button" aria-label="Page suivante">&#8250;</button>
+    </div>
+    <div class="book-hint sans">Utilisez les flèches ← → ou glissez pour tourner les pages</div>
+  </div>
+
+</body>
+</html>
