@@ -1826,6 +1826,25 @@
       .aerial { --it: 42%; }
     }
   }
+
+  /* Mobile : menu à gauche, bouton constructeur à droite de la barre */
+  @media (max-width: 640px) {
+    .site-nav { left: 12px; transform: none; }
+    .tpco-seal {
+      width: 50px;
+      height: 50px;
+      top: 17px;
+      right: 12px;
+      animation: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    .tpco-seal-ring { animation: none; }
+    .tpco-seal-ring text { display: none; }
+    .tpco-seal-core { width: 40px; height: 40px; }
+    .tpco-seal-core img { width: 28px; }
+    .tpco-seal-tip { display: none; }
+  }
 </style>
 </head>
 <body>
