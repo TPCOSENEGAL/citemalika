@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TPCO — Touba Pro Construction | Cité Malika</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --gold: #b8935f;
@@ -13,15 +16,19 @@
     --cream: #faf7f2;
     --text: #2c2c2c;
     --muted: #6b6b6b;
+    --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-serif);
     color: var(--text);
     background: var(--cream);
     line-height: 1.6;
   }
-  .sans { font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .sans { font-family: var(--font-sans); }
 
   .tpco-header {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #2d4258 100%);
@@ -34,7 +41,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 12.5px;
     font-weight: 600;
     color: var(--gold);
@@ -56,7 +63,7 @@
   }
   .tpco-header h1 strong { color: var(--gold); font-weight: 700; }
   .tpco-header p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 15px;
     max-width: 600px;
     margin: 0 auto;
@@ -74,7 +81,7 @@
   }
   .section-sub {
     text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     color: var(--muted);
     font-size: 15px;
     max-width: 600px;
@@ -97,7 +104,7 @@
     line-height: 1;
   }
   .tpco-stat .lbl {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 11.5px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -136,12 +143,12 @@
   }
   .catalogue-info { padding: 18px 22px; }
   .catalogue-info h3 { font-size: 18px; color: var(--navy); margin-bottom: 4px; }
-  .catalogue-info p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .catalogue-info p { font-family: var(--font-sans); font-size: 13px; color: var(--muted); margin-bottom: 10px; }
   .catalogue-cta {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 12.5px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -157,7 +164,7 @@
     padding: 10px;
     border: 1px solid var(--gold);
     border-radius: 6px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -176,7 +183,7 @@
   }
   .upcoming-sub {
     text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 13.5px;
     color: var(--muted);
     max-width: 600px;
@@ -196,7 +203,7 @@
   }
   .upcoming-card h4 { font-size: 17px; color: var(--navy); margin-bottom: 2px; }
   .upcoming-card .upcoming-loc {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 12px;
     color: var(--muted);
     text-transform: uppercase;
@@ -207,7 +214,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 13.5px;
     padding: 10px 0;
     border-bottom: 1px solid #f0ebe3;
@@ -220,7 +227,7 @@
   .upcoming-row .u-price { color: var(--gold-dark); font-weight: 700; white-space: nowrap; }
   .upcoming-note {
     margin-top: 14px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 11px;
     color: var(--muted);
     font-style: italic;
@@ -241,7 +248,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 22px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     color: #fff;
     flex-shrink: 0;
   }
@@ -284,7 +291,7 @@
   .book-nav:disabled { opacity: 0.25; cursor: default; }
   .book-hint {
     text-align: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 11.5px;
     color: #8f98a3;
     padding-bottom: 18px;
@@ -303,7 +310,7 @@
   .back-footer { text-align: center; padding: 10px 0 70px; }
   .back-footer a {
     display: inline-block;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 13.5px;
     color: var(--gold-dark);
     text-decoration: none;
@@ -318,18 +325,457 @@
     main { padding: 44px 6% 10px; }
     .tpco-stats { gap: 24px; }
   }
+
+  .tpco-header > p { text-wrap: balance; }
+
+  /* SOCIAL LINKS */
+  .social-block { margin-top: 30px; }
+  .tpco-header .social-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .social-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14), inset 0 1px 0 rgba(255,255,255,0.08);
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    transition: transform 0.5s var(--ease-spring), background-color 0.3s var(--ease-out), box-shadow 0.5s var(--ease-spring);
+  }
+  .social-btn:hover {
+    background: rgba(255,255,255,0.11);
+    box-shadow: inset 0 0 0 1px rgba(184,147,95,0.6), 0 16px 32px -18px rgba(5,10,16,0.7);
+  }
+  .social-btn:active { transform: scale(0.98); }
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--navy);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .social-icon svg { width: 22px; height: 22px; display: block; }
+  .social-text { display: flex; flex-direction: column; line-height: 1.25; padding-right: 4px; }
+  .social-name { font-size: 14px; font-weight: 600; }
+  .social-handle { font-size: 12px; color: #b9c2cd; }
+  .social-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    display: grid;
+    place-items: center;
+    margin-left: 6px;
+    transition: transform 0.5s var(--ease-spring);
+  }
+  .social-arrow svg { width: 15px; height: 15px; display: block; }
+  .social-btn:hover .social-arrow { transform: translate(2px, -2px) scale(1.05); }
+  @media (max-width: 560px) {
+    .social-row { flex-direction: column; align-items: center; }
+    .social-btn { width: min(100%, 320px); }
+    .social-arrow { margin-left: auto; }
+  }
+
+  /* INTERACTION POLISH */
+  a:focus-visible, button:focus-visible, .catalogue-card:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .catalogue-card { transition: transform 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-spring); }
+  .catalogue-card:active { transform: scale(0.98); }
+  @media (prefers-reduced-motion: no-preference) {
+    .js-reveal .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    .js-reveal .reveal.is-in { opacity: 1; transform: none; }
+  }
+
+
+  /* ===== ENGAGEMENTS ===== */
+  .engagements { max-width: 980px; margin: 0 auto 72px; }
+  .engagements-eyebrow {
+    display: table;
+    margin: 0 auto 24px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    background: rgba(184,147,95,0.12);
+    border: 1px solid rgba(184,147,95,0.32);
+  }
+  .engagements-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .engagement {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(26,43,60,0.04);
+    box-shadow: inset 0 0 0 1px rgba(26,43,60,0.06);
+  }
+  .engagement-core {
+    height: 100%;
+    padding: 30px 30px 32px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 18px 40px -28px rgba(26,43,60,0.4);
+  }
+  .engagement-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+  }
+  .engagement-icon svg { width: 25px; height: 25px; display: block; }
+  .engagement-title {
+    font-family: var(--font-serif);
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--navy);
+    margin-bottom: 10px;
+    text-wrap: balance;
+  }
+  .engagement-text { font-size: 14.5px; line-height: 1.6; color: var(--muted); max-width: 42ch; }
+  @media (max-width: 700px) { .engagements-grid { grid-template-columns: 1fr; } }
+
+  /* ===== PROPOSITION : NAVIGATION ===== */
+  .site-nav {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 70;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: max-content;
+    max-width: calc(100vw - 24px);
+    padding: 6px 6px 6px 20px;
+    border-radius: 999px;
+    background: rgba(250,247,242,0.8);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow: inset 0 0 0 1px rgba(26,43,60,0.08), inset 0 1px 0 rgba(255,255,255,0.7), 0 14px 34px -16px rgba(26,43,60,0.42);
+  }
+  .nav-brand {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+  .nav-brand span { color: var(--gold-dark); }
+  .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+  .nav-links a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
+  }
+  .nav-links a:hover { background: rgba(26,43,60,0.06); }
+  .nav-links a[aria-current] { background: rgba(184,147,95,0.2); color: #6e5533; font-weight: 600; }
+  .nav-builder {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 6px;
+    padding: 5px 14px 5px 6px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(184,147,95,0.45);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.5s var(--ease-spring), background-color 0.3s var(--ease-out);
+  }
+  .nav-builder img { height: 24px; width: auto; max-width: 44px; object-fit: contain; display: block; }
+  .nav-builder:hover { background: var(--cream); }
+  .nav-builder[aria-current] { background: rgba(184,147,95,0.22); color: #6e5533; box-shadow: inset 0 0 0 1px rgba(184,147,95,0.6); }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 4px;
+    padding: 5px 5px 5px 16px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--cream);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.5s var(--ease-spring), background-color 0.3s var(--ease-out);
+  }
+  .nav-cta:hover { background: #22374c; }
+  .nav-cta-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--navy);
+    display: grid;
+    place-items: center;
+    transition: transform 0.5s var(--ease-spring);
+  }
+  .nav-cta-icon svg { width: 15px; height: 15px; display: block; }
+  .nav-cta:hover .nav-cta-icon { transform: rotate(-12deg) scale(1.06); }
+  .nav-cta:active, .nav-builder:active { transform: scale(0.97); }
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    height: 44px;
+    margin-left: 6px;
+    padding: 0 6px 0 16px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--cream);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.5s var(--ease-spring);
+  }
+  .nav-toggle:active { transform: scale(0.96); }
+  .nav-toggle-lines {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+  }
+  .nav-toggle-lines i {
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    right: 9px;
+    height: 1.5px;
+    margin-top: -0.75px;
+    border-radius: 2px;
+    background: var(--cream);
+    transition: transform 0.6s var(--ease-spring);
+  }
+  .nav-toggle-lines i:nth-child(1) { transform: translateY(-3.5px); }
+  .nav-toggle-lines i:nth-child(2) { transform: translateY(3.5px); }
+  .nav-open .nav-toggle-lines i:nth-child(1) { transform: rotate(45deg); }
+  .nav-open .nav-toggle-lines i:nth-child(2) { transform: rotate(-45deg); }
+  .nav-progress {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 3px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gold);
+    transform-origin: left center;
+    transform: scaleX(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  @keyframes nav-progress { to { transform: scaleX(1); } }
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .nav-progress { opacity: 0.9; animation: nav-progress linear both; animation-timeline: scroll(root block); }
+    }
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 65;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 104px 28px 40px;
+    overflow-y: auto;
+    background: rgba(250,247,242,0.95);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s var(--ease-out), visibility 0s linear 0.5s;
+  }
+  .nav-open .nav-overlay { opacity: 1; visibility: visible; transition: opacity 0.5s var(--ease-out), visibility 0s; }
+  .nav-open, .nav-open body { overflow: hidden; }
+  .nav-overlay-inner { width: 100%; max-width: 520px; margin: 0 auto; }
+  .nav-overlay ul { list-style: none; }
+  .nav-overlay li { overflow: hidden; }
+  .nav-overlay li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    font-family: var(--font-serif);
+    font-size: clamp(30px, 8.5vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    text-decoration: none;
+    transform: translateY(110%);
+    opacity: 0;
+    transition: transform 0.6s var(--ease-spring), opacity 0.4s var(--ease-out), color 0.3s var(--ease-out);
+  }
+  .nav-overlay li a svg { width: 22px; height: 22px; opacity: 0.35; transition: transform 0.5s var(--ease-spring), opacity 0.3s; }
+  .nav-overlay li a:hover svg { transform: translateX(4px); opacity: 0.8; }
+  .nav-overlay li a[aria-current] { color: var(--gold-dark); }
+  .nav-open .nav-overlay li a { transform: none; opacity: 1; transition: transform 0.8s var(--ease-spring), opacity 0.6s var(--ease-out), color 0.3s var(--ease-out); }
+  .nav-open .nav-overlay li:nth-child(1) a { transition-delay: 80ms; }
+  .nav-open .nav-overlay li:nth-child(2) a { transition-delay: 125ms; }
+  .nav-open .nav-overlay li:nth-child(3) a { transition-delay: 170ms; }
+  .nav-open .nav-overlay li:nth-child(4) a { transition-delay: 215ms; }
+  .nav-open .nav-overlay li:nth-child(5) a { transition-delay: 260ms; }
+  .nav-open .nav-overlay li:nth-child(6) a { transition-delay: 305ms; }
+  .nav-open .nav-overlay li:nth-child(7) a { transition-delay: 350ms; }
+  .nav-open .nav-overlay li:nth-child(8) a { transition-delay: 395ms; }
+  .nav-overlay-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-spring);
+  }
+  .nav-open .nav-overlay-foot { opacity: 1; transform: none; transition-delay: 420ms; }
+  .nav-overlay-foot a { flex: 1 1 200px; justify-content: space-between; }
+  .nav-overlay-foot .nav-builder { margin: 0; padding: 7px 16px 7px 8px; font-size: 14px; justify-content: flex-start; gap: 12px; }
+  .nav-overlay-foot .nav-cta { margin: 0; padding: 7px 7px 7px 18px; font-size: 14px; }
+
+  @media (max-width: 1179px) {
+    .site-nav .nav-links, .site-nav .nav-builder { display: none; }
+    .nav-toggle { display: inline-flex; }
+  }
+  @media (max-width: 560px) {
+    .site-nav { padding-left: 18px; }
+    .site-nav .nav-cta { display: none; }
+  }
+  @media (min-width: 1180px) {
+    .nav-overlay { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nav-overlay li a, .nav-overlay-foot { transform: none; transition: opacity 0.2s; }
+  }
+
+  .tpco-header { padding-top: 124px; }
+  @media (max-width: 700px) { .tpco-header { padding-top: 108px; } }
 </style>
 </head>
 <body>
 
+  <nav class="site-nav sans" aria-label="Navigation principale">
+    <a class="nav-brand" href="index.html">Cité <span>Malika</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#programme">Programme</a></li>
+      <li><a href="index.html#quartier">Quartier</a></li>
+      <li><a href="index.html#villas">Villas</a></li>
+      <li><a href="index.html#financement">Financement</a></li>
+      <li><a href="index.html#localisation">Localisation</a></li>
+      <li><a href="index.html#calendrier">Calendrier</a></li>
+    </ul>
+    <a class="nav-builder" href="constructeur-tpco.html" aria-current="page"><img src="assets/logo-tpco-icon.png" alt="">Le constructeur</a>
+    <a class="nav-cta" href="index.html#contact">Contact<span class="nav-cta-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.59,160.3l-47.24-21.17a14,14,0,0,0-13.28,1.22,4.81,4.81,0,0,0-.56.42l-24.69,21a1.88,1.88,0,0,1-1.68.06c-15.87-7.66-32.31-24-40-39.65a1.91,1.91,0,0,1,0-1.68l21.07-25a6.13,6.13,0,0,0,.42-.58,14,14,0,0,0,1.12-13.27L95.73,34.49a14,14,0,0,0-14.56-8.38A54.24,54.24,0,0,0,34,80c0,78.3,63.7,142,142,142a54.25,54.25,0,0,0,53.89-47.17A14,14,0,0,0,221.59,160.3ZM176,210C104.32,210,46,151.68,46,80A42.23,42.23,0,0,1,82.67,38h.23a2,2,0,0,1,1.84,1.31l21.1,47.11a2,2,0,0,1,0,1.67L84.73,113.15a4.73,4.73,0,0,0-.43.57,14,14,0,0,0-.91,13.73c8.87,18.16,27.17,36.32,45.53,45.19a14,14,0,0,0,13.77-1c.19-.13.38-.27.56-.42l24.68-21a1.92,1.92,0,0,1,1.6-.1l47.25,21.17a2,2,0,0,1,1.21,2A42.24,42.24,0,0,1,176,210Z"/></svg></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay" aria-label="Ouvrir le menu"><span class="nav-toggle-label" aria-hidden="true">Menu</span><span class="nav-toggle-lines" aria-hidden="true"><i></i><i></i></span></button>
+    <span class="nav-progress" aria-hidden="true"></span>
+  </nav>
+  <div class="nav-overlay sans" id="nav-overlay">
+    <nav class="nav-overlay-inner" aria-label="Menu">
+      <ul>
+          <li><a href="index.html">Accueil<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#programme">Programme<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#quartier">Quartier<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#villas">Villas<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#financement">Financement<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#localisation">Localisation<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#calendrier">Calendrier<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+          <li><a href="index.html#contact">Contact<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li>
+      </ul>
+      <div class="nav-overlay-foot">
+        <a class="nav-builder" href="constructeur-tpco.html" aria-current="page"><img src="assets/logo-tpco-icon.png" alt="">Le constructeur TPCO</a>
+        <a class="nav-cta" href="index.html#contact">Nous contacter<span class="nav-cta-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.59,160.3l-47.24-21.17a14,14,0,0,0-13.28,1.22,4.81,4.81,0,0,0-.56.42l-24.69,21a1.88,1.88,0,0,1-1.68.06c-15.87-7.66-32.31-24-40-39.65a1.91,1.91,0,0,1,0-1.68l21.07-25a6.13,6.13,0,0,0,.42-.58,14,14,0,0,0,1.12-13.27L95.73,34.49a14,14,0,0,0-14.56-8.38A54.24,54.24,0,0,0,34,80c0,78.3,63.7,142,142,142a54.25,54.25,0,0,0,53.89-47.17A14,14,0,0,0,221.59,160.3ZM176,210C104.32,210,46,151.68,46,80A42.23,42.23,0,0,1,82.67,38h.23a2,2,0,0,1,1.84,1.31l21.1,47.11a2,2,0,0,1,0,1.67L84.73,113.15a4.73,4.73,0,0,0-.43.57,14,14,0,0,0-.91,13.73c8.87,18.16,27.17,36.32,45.53,45.19a14,14,0,0,0,13.77-1c.19-.13.38-.27.56-.42l24.68-21a1.92,1.92,0,0,1,1.6-.1l47.25,21.17a2,2,0,0,1,1.21,2A42.24,42.24,0,0,1,176,210Z"/></svg></span></a>
+      </div>
+    </nav>
+  </div>
+
   <div class="tpco-header">
-    <a href="index.html" class="back-link sans">← Retour à Cité Malika</a>
     <h1>Le constructeur <strong>TPCO</strong></h1>
     <p>Touba Pro Construction en quelques chiffres — programmes en cours de livraison et à venir.</p>
+    <div class="social-block">
+      <p class="social-label sans">Suivez les chantiers TPCO</p>
+      <div class="social-row">
+        <a class="social-btn sans" href="https://www.instagram.com/tpco_sn/" target="_blank" rel="noopener" aria-label="TPCO sur Instagram, @tpco_sn (nouvel onglet)">
+          <span class="social-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,82a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162ZM176,26H80A54.06,54.06,0,0,0,26,80v96a54.06,54.06,0,0,0,54,54h96a54.06,54.06,0,0,0,54-54V80A54.06,54.06,0,0,0,176,26Zm42,150a42,42,0,0,1-42,42H80a42,42,0,0,1-42-42V80A42,42,0,0,1,80,38h96a42,42,0,0,1,42,42ZM190,76a10,10,0,1,1-10-10A10,10,0,0,1,190,76Z"/></svg></span>
+          <span class="social-text"><span class="social-name">Instagram</span><span class="social-handle">@tpco_sn</span></span>
+          <span class="social-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></svg></span>
+        </a>
+        <a class="social-btn sans" href="https://www.tiktok.com/@toubaproconstruction" target="_blank" rel="noopener" aria-label="TPCO sur TikTok, @toubaproconstruction (nouvel onglet)">
+          <span class="social-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,74a50.06,50.06,0,0,1-50-50,6,6,0,0,0-6-6H128a6,6,0,0,0-6,6V156a22,22,0,1,1-31.43-19.89A6,6,0,0,0,94,130.69V88a6,6,0,0,0-7-5.91C52.2,88.28,26,120.05,26,156a74,74,0,0,0,148,0V112.93A101.28,101.28,0,0,0,224,126a6,6,0,0,0,6-6V80A6,6,0,0,0,224,74Zm-6,39.8a89.13,89.13,0,0,1-46.5-16.69A6,6,0,0,0,162,102v54a62,62,0,0,1-124,0c0-27.72,18.47-52.48,44-60.38v31.53A34,34,0,1,0,134,156V30h28.29A62.09,62.09,0,0,0,218,85.71Z"/></svg></span>
+          <span class="social-text"><span class="social-name">TikTok</span><span class="social-handle">@toubaproconstruction</span></span>
+          <span class="social-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></svg></span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <main>
   <section class="tpco-section">
+    <div class="engagements">
+      <p class="engagements-eyebrow sans">Nos engagements</p>
+      <div class="engagements-grid">
+        <div class="engagement">
+          <div class="engagement-core">
+            <span class="engagement-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,42H48A14,14,0,0,0,34,56v56c0,51.94,25.12,83.4,46.2,100.64,22.73,18.6,45.27,24.89,46.22,25.15a6,6,0,0,0,3.16,0c.95-.26,23.49-6.55,46.22-25.15C196.88,195.4,222,163.94,222,112V56A14,14,0,0,0,208,42Zm2,70c0,37.76-13.94,68.39-41.44,91.06A131.17,131.17,0,0,1,128,225.72a130.94,130.94,0,0,1-40.56-22.66C59.94,180.39,46,149.76,46,112V56a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"/></svg></span>
+            <h2 class="engagement-title">Garantie décennale sur la construction</h2>
+            <p class="engagement-text sans">Les ouvrages sont couverts pendant dix ans après la réception des travaux.</p>
+          </div>
+        </div>
+        <div class="engagement">
+          <div class="engagement-core">
+            <span class="engagement-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M215.15,40.85A78,78,0,0,0,86.2,121.31l-56.1,56.1a13.94,13.94,0,0,0-4.1,9.9V216a14,14,0,0,0,14,14H72a6,6,0,0,0,6-6V206H96a6,6,0,0,0,6-6V182h18a6,6,0,0,0,4.24-1.76l10.45-10.44A77.59,77.59,0,0,0,160,174h.1A78,78,0,0,0,215.15,40.85ZM226,98.16c-1.12,35.16-30.67,63.8-65.88,63.84a65.93,65.93,0,0,1-24.51-4.67,6,6,0,0,0-6.64,1.26L117.51,170H96a6,6,0,0,0-6,6v18H72a6,6,0,0,0-6,6v18H40a2,2,0,0,1-2-2V187.31a2,2,0,0,1,.58-1.41l58.83-58.83a6,6,0,0,0,1.26-6.64A65.61,65.61,0,0,1,94,95.92C94,60.71,122.68,31.16,157.83,30A66,66,0,0,1,226,98.16ZM190,76a10,10,0,1,1-10-10A10,10,0,0,1,190,76Z"/></svg></span>
+            <h2 class="engagement-title">Accompagnement du terrain à la remise des clés</h2>
+            <p class="engagement-text sans">TPCO vous suit à chaque étape du projet, jusqu'à la livraison de votre villa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="tpco-stats sans">
       <div class="tpco-stat">
         <div class="num">7</div>
@@ -537,6 +983,78 @@
     </div>
     <div class="book-hint sans">Utilisez les flèches ← → ou glissez pour tourner les pages</div>
   </div>
+
+  <script>
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var els = Array.prototype.slice.call(document.querySelectorAll('.engagement, .tpco-stat, .catalogue-card, .upcoming-title, .upcoming-sub, .upcoming-card'));
+      document.documentElement.classList.add('js-reveal');
+      els.forEach(function (el) {
+        var group = Array.prototype.filter.call(el.parentNode.children, function (c) { return els.indexOf(c) !== -1; });
+        el.style.setProperty('--reveal-delay', Math.min(group.indexOf(el), 4) * 90 + 'ms');
+        el.classList.add('reveal');
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          io.unobserve(el);
+          el.addEventListener('transitionend', function done(ev) {
+            if (ev.target !== el || ev.propertyName !== 'transform') return;
+            el.removeEventListener('transitionend', done);
+            el.classList.remove('reveal', 'is-in');
+            el.style.removeProperty('--reveal-delay');
+          });
+          el.classList.add('is-in');
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.querySelector('.nav-toggle');
+      var overlay = document.getElementById('nav-overlay');
+      if (!toggle || !overlay) return;
+      function setOpen(open) {
+        root.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+        toggle.querySelector('.nav-toggle-label').textContent = open ? 'Fermer' : 'Menu';
+        if (open) {
+          var first = overlay.querySelector('a');
+          setTimeout(function () { first.focus({ preventScroll: true }); }, 80);
+        }
+      }
+      toggle.addEventListener('click', function () { setOpen(!root.classList.contains('nav-open')); });
+      overlay.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && root.classList.contains('nav-open')) { setOpen(false); toggle.focus(); }
+      });
+      window.matchMedia('(min-width: 1180px)').addEventListener('change', function (m) { if (m.matches) setOpen(false); });
+    })();
+
+    (function () {
+      var links = document.querySelectorAll('[data-nav-link]');
+      var targets = document.querySelectorAll('[data-nav]');
+      if (!links.length || !targets.length || !('IntersectionObserver' in window)) return;
+      function setActive(key) {
+        links.forEach(function (a) {
+          if (a.getAttribute('data-nav-link') === key) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActive(entry.target.getAttribute('data-nav'));
+        });
+      }, { rootMargin: '-45% 0px -54% 0px' });
+      targets.forEach(function (t) { io.observe(t); });
+    })();
+  </script>
 
 </body>
 </html>
